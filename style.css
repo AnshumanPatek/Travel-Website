@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* // universal padding 
+    // browser default styling nhi hoga fir */
+
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Dongle-light";
+  src: url(Dongle/Dongle-Light.ttf);
+}
+@font-face {
+  font-family: "Dongle-Regular";
+  src: url(Dongle/Dongle-Regular.ttf);
+}
+@font-face {
+  font-family: "Dongle-Bold";
+  src: url(Dongle/Dongle-Bold.ttf);
+}
+header {
+  display: flex;
+  /* // header flex kia */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* // horizontal vertical shadhow area rgba */
+  align-items: center;
+  /* // align item center hojanayedo */
+}
+header img {
+  max-width: 15%;
+  /* //logo image width set kia */
+}
+.nav-menu ul {
+  display: flex;
+  /* //list ko flex kia */
+}
+.nav-menu li {
+  list-style: none;
+  /* // list style dot chale gaye  */
+
+  margin-right: 20px;
+  /* margin right kar naye k liye */
+}
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+/* // list ka last wala child last mai chala jayega */
+.nav-menu a {
+  text-decoration: none;
+
+  /* // under line wala arrow chala gaya  */
+
+  font-family: "Dongle-bold";
+  font-size: 1.6rem;
+  /* // responsive  bana k time help karta hai */
+  color: #333;
+  transition: all ease 0.3s;
+  /* // transition: delaye kar saktaye hai; */
+}
+.nav-menu a:hover {
+  color: #ff7f50;
+}
+.hero {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  /* // over flow tha image usko hidden kar dea */
+}
+.hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* // absoulte find kar karta hai relative k referance say img kaha set karna hai */
+  /* //hero k section k under rahega */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* // z index say jo text hai upar aagaay hai usko -1 under kar dea hai */
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* // image ko center mai leaaya  */
+  text-align: center;
+  /* //text align center kar dea hai */
+  color: #fff;
+}
+.hero-content h1 {
+  font-family: "Dongle-bold";
+  font-size: 1.8rem;
+}
+.hero-content p {
+  font-family: "Dongle-regular";
+  font-size: 1.8 rem;
+  margin-top: -20px;
+  /* // margin wala space kar dea hai top say kam */
+  margin-bottom: 10px;
+  /* // niche say add kar dea bottom say */
+}
+
+.hero-button {
+  display: inline-block;
+  /* // buttuon fix ho jayega */
+  text-decoration: none;
+  /* // niche line kahatam hojayga browower ka defalut wala */
+  color: #fff;
+  background-color: #ff7f50;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-family: "Dongle-light";
+  font-size: 1.6rem;
+  transition: all ease 0.3s;
+}
+.hero-button:hover {
+  background-color: #333;
+}
+.destination {
+  font: size 2.4em;
+  font-family: "Dongle-bold";
+  /* margin-bottom: 40px;
+    margin-left: 80px; 
+    margin-right: 80px; */
+
+  /* margin space aajayega */
+  text-align: center;
+  border: 1px solid black;
+}
+.destinations h2 {
+  margin-bottom: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+.destination-grid {
+  /* background-color: red; */
+  margin: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 column  1 fr space rahaga */
+  grid-gap: 40px;
+  /* grid k beche gap */
+}
+.destination-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.destination-item {
+  text-align: left;
+}
+.destination-item h3 {
+  font-size: 2rem;
+}
+.destination-item p {
+  font-size: 1.4rem;
+  line-height: 1;
+  /* upper  wala line or niche wala line k biche mai heigth set kar saktye */
+  font-family: "Dongle-regular";
+}
+.about {
+  text-align: center;
+  padding: 100px;
+}
+.about h3 {
+  font-family: "Dongle-bold";
+  font-size: 3rem;
+}
+.about p {
+  font-family: "Dongle-regular";
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.team-member {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: green; */
+  /* flex-wrap: wrap; */
+}
+.team-member img {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  object-fit: cover;
+  /* // image jo tha vo bahut strach hai size mai */
+  /* usko cover karna fit hojayega to object fit lagta
+  hai  */
+}
+.team-member h4 {
+  font-family: "Dongle-bold";
+  font-size: 2rem;
+}
+
+.contact {
+  padding: 80px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.contact h3 {
+  font-family: "Dongle-bold";
+  font-size: 3rem;
+}
+.contact-info p {
+  font-family: "Dongle-regular";
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.contact-info ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contact-info li {
+  margin: 0 20px;
+  font-family: "Dongle-regular";
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+.contact-info li a {
+  text-decoration: none;
+  font-family: "Dongle-regular";
+  color: black;
+}
+.contact-info i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.form {
+  width: 100%;
+}
+input,
+textarea {
+  padding: 20px 0;
+  margin: 20px 0;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  /* // cornor round */
+  font-size: 1.4rem;
+  width: 70%;
+  font-family: "Dongle-regular";
+}
+textarea {
+  width: 70%;
+  height: 200px;
+  padding: 20px 10px;
+}
+.form button {
+  display: inline-block;
+  /* // buttuon fix ho jayega */
+  text-decoration: none;
+  /* // niche line kahatam hojayga browower ka defalut wala */
+  color: #fff;
+  background-color: #ff7f50;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-family: "Dongle-light";
+  font-size: 1.6rem;
+  border: none;
+  transition: all ease 0.3s;
+}
+.form button:hover {
+  background-color: #333;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  /* islaye dono k beeche mai space aajayega  */
+
+  padding: 20px;
+  align-items: center;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 20px;
+}
+.form-group input {
+  padding: 8px 15px;
+}
+footer p {
+  font-family: "Dongle-regular";
+  font-size: 1.4rem;
+}
+.myplace li {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  /* background-/color: red; */
+}
+.myplace i {
+  /* background-colo/r: orange; */
+  margin-right: 25px;
+}
+
+/* responsive ness karnata hai */
+
+@media (max-width: 1177px) {
+  .hero-content h1 {
+    line-height: 0.7;
+
+    /* yah jab width 1177 say kam hoga tab yah change kar dega line height ko  */
+  }
+
+  .hero-content p {
+    margin-top: 0;
+    line-height: 0.8;
+  }
+
+  .destination img {
+    height: 250;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    margin-bottom: 5px;
+  }
+  .team-member img {
+    width: 200px;
+    height: 200px;
+  }
+  .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+  }
+}
+@media (max-width: 603px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    display: none;
+  }
+  .hero-content h1 {
+    font-size: 1.3 rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 8px 22px;
+    font-size: 16px;
+  }
+  .destinations {
+    font-size: 1.5rem;
+  }
+  .destination-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid: gap 40px;
+  }
+  .about {
+    padding: 0 30px;
+  }
+  .team-member img {
+    width: 250px;
+    height: 250px;
+  }
+}
